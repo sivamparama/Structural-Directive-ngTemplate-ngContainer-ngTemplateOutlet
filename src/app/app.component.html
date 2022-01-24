@@ -1,0 +1,21 @@
+<hello name="{{ name }}"></hello>
+<button (click)="change()">change</button>
+<ng-template [show]="display">
+<p>
+  Start editing to see some magic happen :)
+</p>
+</ng-template>
+
+<div>
+  testing this new div <ng-template #template let-y let-x="name">PARAMESH SHIVA {{y}} {{name}} {{x}}</ng-template><ng-container *ngTemplateOutlet="template,context: tempcontext">paramesh shiva</ng-container> working.
+</div>
+
+<table>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <ng-container *ngIf="item.name=='paramashivam'">
+        <td>{{item.name}}</td>
+      </ng-container>
+    </tr>
+  </tbody>
+</table>
